@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import Body from './components/body/Body';
+import Carousel from './components/carousel/Carousel';
+import Footer from './components/footer/Footer'
+import Navbar from './components/navbar/Navbar';
+import React from 'react'
+import Categories from './components/categories/Categories';
 
-function App() {
+function App({name}) {
+  // let name = "sachin tendulkar"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Header/> */}
+      <Navbar/> 
+      <br/>
+      {/* <Categories/> */}
+      {/* <Carousel/> */}
+      <Body name={name}/>
+      {/* <Footer/> */}
     </div>
+
   );
 }
+
+// export const  App = ({name,course}) => {
+//   return (
+//     <div>
+//       <h1>Hello  {name} {course}</h1>
+//       <button onClick = {() => clickHandler(name)}>Click</button>
+//     </div>
+    
+      
+//   )
+//   function clickHandler(name) {
+//     console.log("Clicked", name);
+//   }
+// }
+
+// App.propType = {
+//   name:propTypes.string,
+//   course:propTypes.string
+// }
+
+// App.defaultProps = {
+//   name: "Hemlata",
+//   course:"JS"
+// }
 
 export default App;
